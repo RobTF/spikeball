@@ -44,13 +44,13 @@ in either x86 or x64, however the engine library does not care which architectur
 <h2>Licensing and use of the engine</h2>
 <p>
 If you are inspired to build a full game with this engine as a base then PLEASE DO!! It's free for all and if you have
-an idea let me know and I will lively endeavour to support you. There are no royalties required and everytihng falls under
+an idea let me know and I will likely endeavour to support you. There are no royalties required and everytihng falls under
 the MIT licence. Libraries I have referenced (such as BASS) which are licenced by other means are easily replaced.
 </p>
 
 <h2>Images</h2>
-<img src="doc/img2.png" />
 <p>In game</p>
+<img src="doc/img2.png" />
 
-<img src="doc/img3.png" />
 <p>Map editing</p>
+<img src="doc/img3.png" />
