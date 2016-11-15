@@ -23,8 +23,8 @@ Spikeball is a small game engine written with the initial aim of emulating the S
 <h2>Run & Play!</h2>
 <p>
 The project currently consists of a single Visual Studio 2015 solution and two projects, Platformer.DirectX and Platformer.Engine.
-The "DirectX" project a renderer that uses Direct2D to perform its drawing and is the project you need to run as it provides
-the actual entry point, the engine is loaded as an assembly.
+The "DirectX" project is a renderer that uses Direct2D to perform its drawing and is the project you need to run as it provides
+the actual entry point, the engine is loaded into the application as an assembly reference.
 </p>
 <p>
 There are two test maps provided, to "play" them simply choose them from the file menu and use the arrow keys to move
