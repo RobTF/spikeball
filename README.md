@@ -1,4 +1,4 @@
-# spikeball
+# SpikeBall
 2D Platform game engine written in straight C# which features Sonic the Hedgehog style gameplay.
 
 Spikeball is a small game engine written with the initial aim of emulating the Sonic the Hedgehog series.
@@ -7,19 +7,20 @@ Spikeball is a small game engine written with the initial aim of emulating the S
 
 <b>Features</b>
 <ul>
-	<li>Built in emulation the Sonic the Hedgehog movement phyiscs (as described on Sonic Retro).</li>
+	<li>Built in emulation of the Sonic the Hedgehog movement physics (as described on Sonic Retro).</li>
 	<li>Completely standalone C# assembly, with no dependencies on any specific game development tool.</li>
-	<li>Portable code, would be possible to port to phone apps for example.</li>
+	<li>Portable code; it would be possible to port the engine to phone apps, for example.</li>
 	<li>Game engine and rendering systems are completely decoupled (e.g. possible to use high res sprites).</li>
 	<li>Levels/maps built using the Tiled tile editor.</li>
-	<li>Collision system (traces + AABB).</li>
+	<li>Collision system (per tile and AABB).</li>
 	<li>Basic animation system.</li>
 	<li>Basic audio system.</li>
 	<li>Resource management system (preload/late load).</li>
 	<li>Renderer provided which uses Direct2D.</li>
+	<li>Possibly a good learning tool for those wishing to learn the basics of game development.</li>
 </ul>
 
-<h2>Notes</h2>
+<h2>Run & Play!</h2>
 <p>
 The project currently consists of a single Visual Studio 2015 solution and two projects, Platformer.DirectX and Platformer.Engine.
 The "DirectX" project a renderer that uses Direct2D to perform its drawing and is the project you need to run as it provides
