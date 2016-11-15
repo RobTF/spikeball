@@ -1,0 +1,8 @@
+ring_collect_0 = 17 0 16 14
+ring_collect_1 = 17 15 16 14
+ring_collect_2 = 34 0 16 14
+ring_collect_3 = 34 15 16 14
+ring_idle_0 = 0 0 16 17
+ring_idle_1 = 51 0 12 17
+ring_idle_2 = 13 30 6 17
+ring_idle_3 = 0 18 12 17

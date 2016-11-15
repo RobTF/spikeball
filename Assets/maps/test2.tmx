@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="1000" height="500" tilewidth="16" tileheight="16" backgroundcolor="#c2e5ff" nextobjectid="114">
+ <tileset firstgid="1" name="art" tilewidth="16" tileheight="16" tilecount="1850" columns="50">
+  <image source="../textures/test2/art.png" width="800" height="600"/>
+ </tileset>
+ <tileset firstgid="1851" name="entities" tilewidth="16" tileheight="16" tilecount="1850" columns="50">
+  <image source="../textures/entities.png" width="800" height="600"/>
+ </tileset>
+ <tileset firstgid="3701" name="collision" tilewidth="16" tileheight="16" tilecount="1850" columns="50">
+  <image source="../textures/test2/collision_map.bmp" trans="ffffff" width="800" height="600"/>
+  <tile id="0">
+   <properties>
+    <property name="angle" type="int" value="0"/>
+    <property name="angle_ceiling" type="int" value="180"/>
+    <property name="angle_leftwall" type="int" value="270"/>
+    <property name="angle_rightwall" type="int" value="90"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="angle" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="angle" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="angle" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="angle" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="angle" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="angle" type="int" value="15"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="angle" type="int" value="30"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="angle" type="int" value="30"/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="angle" type="int" value="30"/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="angle" type="int" value="15"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="angle" type="int" value="5"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="angle" type="int" value="355"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="angle" type="int" value="330"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="angle" type="int" value="315"/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="angle" type="int" value="330"/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="angle" type="int" value="5"/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="angle" type="int" value="275"/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="angle" type="int" value="285"/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="angle" type="int" value="300"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="angle" type="int" value="300"/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="angle" type="int" value="315"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="angle" type="int" value="315"/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="angle" type="int" value="330"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="angle" type="int" value="330"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="angle" type="int" value="345"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="angle" type="int" value="350"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="angle" type="int" value="355"/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="angle" type="int" value="5"/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="angle" type="int" value="10"/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="angle" type="int" value="20"/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="angle" type="int" value="20"/>
+   </properties>
+  </tile>
+  <tile id="34">
+   <properties>
+    <property name="angle" type="int" value="30"/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="angle" type="int" value="45"/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="angle" type="int" value="55"/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="angle" type="int" value="55"/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="angle" type="int" value="70"/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="angle" type="int" value="80"/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="angle" type="int" value="85"/>
+   </properties>
+  </tile>
+  <tile id="43">
+   <properties>
+    <property name="angle" type="int" value="175"/>
+   </properties>
+  </tile>
+  <tile id="44">
+   <properties>
+    <property name="angle" type="int" value="170"/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="angle" type="int" value="160"/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="angle" type="int" value="145"/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="angle" type="int" value="145"/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="angle" type="int" value="135"/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="angle" type="int" value="0"/>
+    <property name="solid_type" type="int" value="2"/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="angle" type="int" value="120"/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="angle" type="int" value="110"/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="angle" type="int" value="110"/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="angle" type="int" value="100"/>
+   </properties>
+  </tile>
+  <tile id="56">
+   <properties>
+    <property name="angle" type="int" value="95"/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="angle" type="int" value="185"/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="angle" type="int" value="190"/>
+   </properties>
+  </tile>
+  <tile id="59">
+   <properties>
+    <property name="angle" type="int" value="200"/>
+   </properties>
+  </tile>
+  <tile id="60">
+   <properties>
+    <property name="angle" type="int" value="210"/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="angle" type="int" value="200"/>
+   </properties>
+  </tile>
+  <tile id="63">
+   <properties>
+    <property name="angle" type="int" value="225"/>
+   </properties>
+  </tile>
+  <tile id="64">
+   <properties>
+    <property name="angle" type="int" value="235"/>
+   </properties>
+  </tile>
+  <tile id="66">
+   <properties>
+    <property name="angle" type="int" value="235"/>
+   </properties>
+  </tile>
+  <tile id="67">
+   <properties>
+    <property name="angle" type="int" value="250"/>
+   </properties>
+  </tile>
+  <tile id="68">
+   <properties>
+    <property name="angle" type="int" value="260"/>
+   </properties>
+  </tile>
+  <tile id="69">
+   <properties>
+    <property name="angle" type="int" value="265"/>
+   </properties>
+  </tile>
+  <tile id="70">
+   <properties>
+    <property name="angle" type="int" value="350"/>
+   </properties>
+  </tile>
+  <tile id="71">
+   <properties>
+    <property name="angle" type="int" value="320"/>
+   </properties>
+  </tile>
+  <tile id="72">
+   <properties>
+    <property name="angle" type="int" value="314"/>
+   </properties>
+  </tile>
+  <tile id="73">
+   <properties>
+    <property name="angle" type="int" value="314"/>
+   </properties>
+  </tile>
+  <tile id="74">
+   <properties>
+    <property name="angle" type="int" value="300"/>
+   </properties>
+  </tile>
+  <tile id="75">
+   <properties>
+    <property name="angle" type="int" value="285"/>
+   </properties>
+  </tile>
+  <tile id="76">
+   <properties>
+    <property name="angle" type="int" value="275"/>
+   </properties>
+  </tile>
+  <tile id="77">
+   <properties>
+    <property name="angle" type="int" value="265"/>
+   </properties>
+  </tile>
+  <tile id="78">
+   <properties>
+    <property name="angle" type="int" value="240"/>
+   </properties>
+  </tile>
+  <tile id="79">
+   <properties>
+    <property name="angle" type="int" value="224"/>
+   </properties>
+  </tile>
+  <tile id="80">
+   <properties>
+    <property name="angle" type="int" value="224"/>
+   </properties>
+  </tile>
+  <tile id="81">
+   <properties>
+    <property name="angle" type="int" value="215"/>
+   </properties>
+  </tile>
+  <tile id="82">
+   <properties>
+    <property name="angle" type="int" value="200"/>
+   </properties>
+  </tile>
+  <tile id="83">
+   <properties>
+    <property name="angle" type="int" value="185"/>
+   </properties>
+  </tile>
+  <tile id="84">
+   <properties>
+    <property name="angle" type="int" value="185"/>
+   </properties>
+  </tile>
+  <tile id="85">
+   <properties>
+    <property name="angle" type="int" value="226"/>
+   </properties>
+  </tile>
+  <tile id="86">
+   <properties>
+    <property name="angle" type="int" value="240"/>
+   </properties>
+  </tile>
+  <tile id="87">
+   <properties>
+    <property name="angle" type="int" value="265"/>
+   </properties>
+  </tile>
+  <tile id="88">
+   <properties>
+    <property name="angle" type="int" value="5"/>
+   </properties>
+  </tile>
+  <tile id="89">
+   <properties>
+    <property name="angle" type="int" value="15"/>
+   </properties>
+  </tile>
+  <tile id="90">
+   <properties>
+    <property name="angle" type="int" value="20"/>
+   </properties>
+  </tile>
+  <tile id="91">
+   <properties>
+    <property name="angle" type="int" value="20"/>
+   </properties>
+  </tile>
+  <tile id="92">
+   <properties>
+    <property name="angle" type="int" value="25"/>
+   </properties>
+  </tile>
+  <tile id="93">
+   <properties>
+    <property name="angle" type="int" value="30"/>
+   </properties>
+  </tile>
+  <tile id="94">
+   <properties>
+    <property name="angle" type="int" value="35"/>
+   </properties>
+  </tile>
+  <tile id="95">
+   <properties>
+    <property name="angle" type="int" value="20"/>
+   </properties>
+  </tile>
+  <tile id="96">
+   <properties>
+    <property name="angle" type="int" value="44"/>
+   </properties>
+  </tile>
+  <tile id="97">
+   <properties>
+    <property name="angle" type="int" value="60"/>
+   </properties>
+  </tile>
+  <tile id="100">
+   <properties>
+    <property name="angle" type="int" value="185"/>
+   </properties>
+  </tile>
+  <tile id="101">
+   <properties>
+    <property name="angle" type="int" value="195"/>
+   </properties>
+  </tile>
+  <tile id="102">
+   <properties>
+    <property name="angle" type="int" value="200"/>
+   </properties>
+  </tile>
+  <tile id="103">
+   <properties>
+    <property name="angle" type="int" value="205"/>
+   </properties>
+  </tile>
+  <tile id="104">
+   <properties>
+    <property name="angle" type="int" value="205"/>
+   </properties>
+  </tile>
+  <tile id="105">
+   <properties>
+    <property name="angle" type="int" value="210"/>
+   </properties>
+  </tile>
+  <tile id="106">
+   <properties>
+    <property name="angle" type="int" value="215"/>
+   </properties>
+  </tile>
+  <tile id="107">
+   <properties>
+    <property name="angle" type="int" value="40"/>
+   </properties>
+  </tile>
+  <tile id="108">
+   <properties>
+    <property name="angle" type="int" value="35"/>
+   </properties>
+  </tile>
+  <tile id="109">
+   <properties>
+    <property name="angle" type="int" value="30"/>
+   </properties>
+  </tile>
+  <tile id="110">
+   <properties>
+    <property name="angle" type="int" value="20"/>
+   </properties>
+  </tile>
+  <tile id="111">
+   <properties>
+    <property name="angle" type="int" value="20"/>
+   </properties>
+  </tile>
+  <tile id="112">
+   <properties>
+    <property name="angle" type="int" value="15"/>
+   </properties>
+  </tile>
+  <tile id="113">
+   <properties>
+    <property name="angle" type="int" value="10"/>
+   </properties>
+  </tile>
+  <tile id="114">
+   <properties>
+    <property name="angle" type="int" value="5"/>
+   </properties>
+  </tile>
+  <tile id="115">
+   <properties>
+    <property name="angle" type="int" value="220"/>
+   </properties>
+  </tile>
+  <tile id="116">
+   <properties>
+    <property name="angle" type="int" value="220"/>
+   </properties>
+  </tile>
+  <tile id="117">
+   <properties>
+    <property name="angle" type="int" value="215"/>
+   </properties>
+  </tile>
+  <tile id="118">
+   <properties>
+    <property name="angle" type="int" value="215"/>
+   </properties>
+  </tile>
+  <tile id="119">
+   <properties>
+    <property name="angle" type="int" value="210"/>
+   </properties>
+  </tile>
+  <tile id="120">
+   <properties>
+    <property name="angle" type="int" value="200"/>
+   </properties>
+  </tile>
+  <tile id="121">
+   <properties>
+    <property name="angle" type="int" value="190"/>
+   </properties>
+  </tile>
+  <tile id="122">
+   <properties>
+    <property name="angle" type="int" value="185"/>
+   </properties>
+  </tile>
+  <tile id="123">
+   <properties>
+    <property name="angle" type="int" value="35"/>
+   </properties>
+  </tile>
+  <tile id="124">
+   <properties>
+    <property name="angle" type="int" value="40"/>
+   </properties>
+  </tile>
+  <tile id="125">
+   <properties>
+    <property name="angle" type="int" value="215"/>
+   </properties>
+  </tile>
+  <tile id="126">
+   <properties>
+    <property name="angle" type="int" value="220"/>
+   </properties>
+  </tile>
+  <tile id="127">
+   <properties>
+    <property name="angle" type="int" value="20"/>
+   </properties>
+  </tile>
+  <tile id="128">
+   <properties>
+    <property name="angle" type="int" value="170"/>
+   </properties>
+  </tile>
+  <tile id="129">
+   <properties>
+    <property name="angle" type="int" value="135"/>
+   </properties>
+  </tile>
+  <tile id="130">
+   <properties>
+    <property name="angle" type="int" value="110"/>
+   </properties>
+  </tile>
+  <tile id="224">
+   <properties>
+    <property name="angle" type="int" value="0"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="5551" name="background" tilewidth="128" tileheight="128" tilecount="24" columns="6">
+  <image source="../textures/test2/background.png" width="800" height="600"/>
+ </tileset>
+ <layer name="background_2" width="1000" height="500">
+  <properties>
+   <property name="horiz_offset" type="float" value="192"/>
+   <property name="horiz_scroll_multiplier" type="float" value="0.05"/>
+   <property name="vert_offset" type="float" value="120"/>
+   <property name="vert_scroll_multiplier" type="float" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3dsQnAMAxFQS2R/WeIIYnHc+nyF4KQwF37kNAGqgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPiG6+j1O/Qn9LO5v3s/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsI3wH3yG/vd5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHjDApKoVJSAhB4A
+  </data>
+ </layer>
+ <layer name="background_1" width="1000" height="500">
+  <properties>
+   <property name="horiz_offset" type="float" value="192"/>
+   <property name="horiz_scroll_multiplier" type="float" value="0.3"/>
+   <property name="vert_offset" type="float" value="-350"/>
+   <property name="vert_scroll_multiplier" type="float" value="0.1"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3duwkAIAxAQZdw/xXs/czmCCmCInLXPgLJBCkFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgDa3q+rsdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAu3rwf3oEfR7u0X4rOe++sz17HwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAvNvK2w4mAhB4A
+  </data>
+ </layer>
+ <layer name="art1" width="1000" height="500">
+  <properties>
+   <property name="vis_layer" type="int" value="-1"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   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
+  </data>
+ </layer>
+ <objectgroup name="entities 2">
+  <properties>
+   <property name="collision_path" type="int" value="1"/>
+   <property name="vis_layer" type="int" value="-1"/>
+  </properties>
+  <object id="38" type="item_ring" gid="1859" x="2352" y="4560" width="16" height="16"/>
+  <object id="39" type="item_ring" gid="1859" x="2384" y="4560" width="16" height="16"/>
+  <object id="40" type="item_ring" gid="1859" x="2425" y="4560" width="16" height="16"/>
+ </objectgroup>
+ <layer name="art2" width="1000" height="500">
+  <properties>
+   <property name="vis_layer" type="int" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   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
+  </data>
+ </layer>
+ <layer name="art3" width="1000" height="500">
+  <properties>
+   <property name="vis_layer" type="int" value="1"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   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
+  </data>
+ </layer>
+ <objectgroup name="entities">
+  <properties>
+   <property name="vis_layer" type="int" value="1"/>
+  </properties>
+  <object id="1" type="player_spawn" gid="1851" x="497.5" y="4087.5" width="16" height="16"/>
+  <object id="4" type="trigger_pathswitch" gid="1853" x="2288" y="4448" width="32" height="255.5">
+   <properties>
+    <property name="collision_path2" type="int" value="1"/>
+    <property name="ground_only" type="bool" value="true"/>
+    <property name="vis_layer1" type="int" value="1"/>
+    <property name="vis_layer2" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="9" type="item_monitor" gid="1854" x="1306.5" y="3678.5" width="30" height="30">
+   <properties>
+    <property name="powerup_type" value="TenRings"/>
+   </properties>
+  </object>
+  <object id="16" type="spring" gid="1856" x="414.5" y="4128" width="32" height="32">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
+  <object id="18" type="spring" gid="1858" x="431.5" y="4327" width="32" height="32">
+   <properties>
+    <property name="direction" value="Down"/>
+   </properties>
+  </object>
+  <object id="19" type="spring" gid="1855" x="978" y="4099.5" width="32" height="32">
+   <properties>
+    <property name="direction" value="Up"/>
+    <property name="spring_type" value="Yellow"/>
+   </properties>
+  </object>
+  <object id="20" type="bridge" gid="1853" x="1104" y="3952" width="16" height="16">
+   <properties>
+    <property name="length" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="22" type="spring" gid="1855" x="1065" y="3937" width="32" height="32">
+   <properties>
+    <property name="direction" value="Up"/>
+    <property name="spring_type" value="Yellow"/>
+   </properties>
+  </object>
+  <object id="23" type="item_ring" gid="1859" x="1360" y="4080" width="16" height="16"/>
+  <object id="25" type="item_ring" gid="1859" x="1384" y="4080" width="16" height="16"/>
+  <object id="30" type="item_ring" gid="1859" x="1432" y="4080" width="16" height="16"/>
+  <object id="31" type="item_ring" gid="1859" x="1408" y="4080" width="16" height="16"/>
+  <object id="37" type="item_ring" gid="1859" x="616" y="4104" width="16" height="16"/>
+  <object id="41" type="spikes" gid="1860" x="883" y="4099" width="32" height="32"/>
+  <object id="42" type="item_monitor" gid="1854" x="608.5" y="3915.5" width="30" height="30">
+   <properties>
+    <property name="powerup_type" value="TenRings"/>
+   </properties>
+  </object>
+  <object id="44" type="spring" gid="1855" x="2997.5" y="4545.5" width="32" height="32">
+   <properties>
+    <property name="direction" value="Up"/>
+    <property name="spring_type" value="Red"/>
+   </properties>
+  </object>
+  <object id="45" type="spikes" gid="1860" x="2736" y="4624" width="32" height="32"/>
+  <object id="46" type="spikes" gid="1860" x="2704" y="4624" width="32" height="32"/>
+  <object id="47" type="spikes" gid="1860" x="2768" y="4624" width="32" height="32"/>
+  <object id="48" type="spikes" gid="1860" x="2800" y="4624" width="32" height="32"/>
+  <object id="49" type="spikes" gid="1860" x="2832" y="4624" width="32" height="32"/>
+  <object id="50" type="trigger_pathswitch" gid="1853" x="3344" y="3904" width="32" height="255.5">
+   <properties>
+    <property name="collision_path1" type="int" value="0"/>
+    <property name="collision_path2" type="int" value="1"/>
+    <property name="ground_only" type="bool" value="true"/>
+    <property name="vis_layer1" type="int" value="1"/>
+    <property name="vis_layer2" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="52" type="item_monitor" gid="1854" x="3296" y="4816" width="30" height="30">
+   <properties>
+    <property name="powerup_type" value="TenRings"/>
+   </properties>
+  </object>
+  <object id="54" type="item_monitor" gid="1854" x="3456" y="4816" width="30" height="30">
+   <properties>
+    <property name="powerup_type" value="TenRings"/>
+   </properties>
+  </object>
+  <object id="56" type="spring" gid="1857" x="3873" y="5008" width="32" height="32">
+   <properties>
+    <property name="direction" value="Left"/>
+   </properties>
+  </object>
+  <object id="58" type="spring" gid="1856" x="3935" y="5008" width="32" height="32">
+   <properties>
+    <property name="direction" value="Right"/>
+    <property name="spring_type" value="Yellow"/>
+   </properties>
+  </object>
+  <object id="59" type="spikes" gid="1861" x="3551" y="5008" width="32" height="32">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
+  <object id="61" type="spikes" gid="1861" x="3551" y="4976" width="32" height="32">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
+  <object id="62" type="bridge" gid="1853" x="4352" y="4896" width="16" height="16">
+   <properties>
+    <property name="length" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="63" type="item_ring" gid="1859" x="3296" y="4016" width="16" height="16"/>
+  <object id="64" type="item_ring" gid="1859" x="3360" y="4016" width="16" height="16"/>
+  <object id="65" type="item_ring" gid="1859" x="3408" y="3984" width="16" height="16"/>
+  <object id="66" type="item_ring" gid="1859" x="3424" y="3936" width="16" height="16"/>
+  <object id="67" type="item_ring" gid="1859" x="3392" y="3888" width="16" height="16"/>
+  <object id="69" type="item_ring" gid="1859" x="3328" y="3888" width="16" height="16"/>
+  <object id="70" type="item_ring" gid="1859" x="3280" y="3936" width="16" height="16"/>
+  <object id="71" type="item_ring" gid="1859" x="3280" y="4096" width="16" height="16"/>
+  <object id="72" type="item_ring" gid="1859" x="3280" y="4144" width="16" height="16"/>
+  <object id="73" type="item_ring" gid="1859" x="3280" y="4192" width="16" height="16"/>
+  <object id="74" type="item_ring" gid="1859" x="3280" y="4240" width="16" height="16"/>
+  <object id="75" type="item_ring" gid="1859" x="3280" y="4288" width="16" height="16"/>
+  <object id="76" type="item_ring" gid="1859" x="3616" y="4704" width="16" height="16"/>
+  <object id="77" type="item_ring" gid="1859" x="3536" y="4704" width="16" height="16"/>
+  <object id="78" type="item_ring" gid="1859" x="3456" y="4704" width="16" height="16"/>
+  <object id="79" type="item_ring" gid="1859" x="3376" y="4704" width="16" height="16"/>
+  <object id="80" type="item_ring" gid="1859" x="4439" y="4832" width="16" height="16"/>
+  <object id="81" type="item_ring" gid="1859" x="4471" y="4832" width="16" height="16"/>
+  <object id="82" type="item_ring" gid="1859" x="4503" y="4832" width="16" height="16"/>
+  <object id="83" type="item_ring" gid="1859" x="4407" y="4832" width="16" height="16"/>
+  <object id="85" type="spring" gid="1855" x="4773" y="4849" width="32" height="32">
+   <properties>
+    <property name="direction" value="Up"/>
+    <property name="spring_type" value="Red"/>
+   </properties>
+  </object>
+  <object id="86" type="spring" gid="1855" x="4580" y="4321" width="32" height="32">
+   <properties>
+    <property name="direction" value="Up"/>
+    <property name="spring_type" value="Red"/>
+   </properties>
+  </object>
+  <object id="87" type="spikes" gid="1860" x="4718" y="4322" width="32" height="32">
+   <properties>
+    <property name="solid_type" value="JumpThrough"/>
+   </properties>
+  </object>
+  <object id="88" type="spikes" gid="1860" x="4686.5" y="4322" width="32" height="32">
+   <properties>
+    <property name="solid_type" value="JumpThrough"/>
+   </properties>
+  </object>
+  <object id="91" type="spring" gid="1856" x="5343" y="3616" width="32" height="32">
+   <properties>
+    <property name="direction" value="Right"/>
+    <property name="spring_type" value="Red"/>
+   </properties>
+  </object>
+  <object id="92" type="item_ring" gid="1859" x="640" y="4104" width="16" height="16"/>
+  <object id="93" type="item_ring" gid="1859" x="592" y="4104" width="16" height="16"/>
+  <object id="94" type="item_ring" gid="1859" x="5480" y="3608" width="16" height="16"/>
+  <object id="95" type="item_ring" gid="1859" x="5520" y="3584" width="16" height="16"/>
+  <object id="96" type="item_ring" gid="1859" x="5552" y="3552" width="16" height="16"/>
+  <object id="97" type="item_ring" gid="1859" x="5592" y="3528" width="16" height="16"/>
+  <object id="98" type="item_ring" gid="1859" x="5640" y="3512" width="16" height="16"/>
+  <object id="99" type="item_ring" gid="1859" x="5824" y="3456" width="16" height="16"/>
+  <object id="100" type="item_ring" gid="1859" x="5792" y="3488" width="16" height="16"/>
+  <object id="101" type="item_ring" gid="1859" x="5752" y="3512" width="16" height="16"/>
+  <object id="102" type="item_ring" gid="1859" x="5864" y="3432" width="16" height="16"/>
+  <object id="103" type="item_ring" gid="1859" x="5912" y="3416" width="16" height="16"/>
+  <object id="104" type="item_ring" gid="1859" x="6064" y="3360" width="16" height="16"/>
+  <object id="105" type="item_ring" gid="1859" x="6032" y="3392" width="16" height="16"/>
+  <object id="106" type="item_ring" gid="1859" x="5992" y="3416" width="16" height="16"/>
+  <object id="107" type="item_ring" gid="1859" x="6104" y="3336" width="16" height="16"/>
+  <object id="108" type="item_ring" gid="1859" x="6152" y="3320" width="16" height="16"/>
+  <object id="109" type="item_ring" gid="1859" x="6336" y="3264" width="16" height="16"/>
+  <object id="110" type="item_ring" gid="1859" x="6304" y="3296" width="16" height="16"/>
+  <object id="111" type="item_ring" gid="1859" x="6264" y="3320" width="16" height="16"/>
+  <object id="112" type="item_ring" gid="1859" x="6376" y="3240" width="16" height="16"/>
+  <object id="113" type="item_ring" gid="1859" x="6424" y="3224" width="16" height="16"/>
+ </objectgroup>
+ <layer name="art 4" width="1000" height="500">
+  <properties>
+   <property name="vis_layer" type="int" value="2"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3XV06VARRG0T/hXhWsk7GCdTKICtbJWMECFpwJNrCAWMbinsMlasJayX46b+ftGwYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOB/sjo1DGv1sl7V63pT6/W2FkfDsFQ361bdrjt1t+6NJr+fHA/DqTpdZ+psnavZmhv/6+8AAADA37HdBt+p77VbP+pn/arftdyGXqmn9aye14tarbXR5Pf5NvjVWqhrdb1u1GIt2ecAAADsE9Nt5Jk6XEfqaB2r43WiNmurPteX+lrfart29uB+vw3+oB7Wo3pcT2q5VuxzAAAA9onZNvJcna8LdbEu1eW6UlNt5FGN60AdrEM1XTPjye8b9a7e14f6WJ9qs7bscwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgD3xB4EDl+2AhB4A
+  </data>
+ </layer>
+ <layer name="collision" width="1000" height="500" opacity="0.54">
+  <data encoding="base64" compression="gzip">
+   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
+  </data>
+ </layer>
+ <layer name="collision path 0" width="1000" height="500" opacity="0.51">
+  <properties>
+   <property name="collision_path" type="int" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3XuQ2DABBE0a2AbqkEH1w2rXoDUlKPhN6TJp/0VwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHBlHNIPAAAAAH0OAAAAefocAAAA8vQ5AAAA5OlzAAAAyNPnAAAAkKfPAQAAIE+fAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADcwzFUjecAAACAjK8+BwAAgLiPPgcAAICotZt81+cAAAAQ8+4eX3qbPgcAAIC/mrrBH71n79WbzybX5wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQ9QPsz6aVgIQeAA==
+  </data>
+ </layer>
+ <layer name="collision path 1" width="1000" height="500" opacity="0.48">
+  <properties>
+   <property name="collision_path" type="int" value="1"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3XOQ7CUBBEQZ/g35btApgdzIlpZI1E5JAfuEp6mnTSHgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFh2aHP7tEvbnwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANZq0+aOrfcnAAAAsF61z0f7HAAAALqpfX6yzwEAAKCb2ufndLHRAQAAoIva59d0S3cbHQAAAP6u9vnXI/eZXmlKb1sdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABZ9AOlHPxiAhB4A
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{51A730E7-AA78-4A76-81F5-896B10734968}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Platformer.Engine</RootNamespace>
+    <AssemblyName>Platformer.Engine</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TiledSharp">
+      <HintPath>..\packages\TiledSharp.0.15\lib\TiledSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\SoundEffectPlaybackEventArgs.cs" />
+    <Compile Include="Bitmap.cs" />
+    <Compile Include="Collision\BoundingBox.cs" />
+    <Compile Include="Collision\Quadtree.cs" />
+    <Compile Include="Direction.cs" />
+    <Compile Include="Entities\Animatable.cs" />
+    <Compile Include="Entities\Camera.cs" />
+    <Compile Include="Gameplay\Entities\Bridge.cs" />
+    <Compile Include="Gameplay\Entities\BridgeLog.cs" />
+    <Compile Include="Gameplay\Entities\Explosion.cs" />
+    <Compile Include="Gameplay\Entities\Sonic.cs" />
+    <Compile Include="Gameplay\Entities\Monitor.cs" />
+    <Compile Include="Gameplay\Entities\MonitorPowerup.cs" />
+    <Compile Include="Gameplay\Entities\Ring.cs" />
+    <Compile Include="Gameplay\Entities\Spikes.cs" />
+    <Compile Include="Gameplay\Entities\SpindashDust.cs" />
+    <Compile Include="Gameplay\Entities\BrakeDust.cs" />
+    <Compile Include="Gameplay\Entities\Player.cs" />
+    <Compile Include="Movement\PlayerMovementMode.cs" />
+    <Compile Include="Entities\PlayerSpawn.cs" />
+    <Compile Include="Gameplay\Entities\SonicCamera.cs" />
+    <Compile Include="Entities\GameEntity.cs" />
+    <Compile Include="Entities\GameEntityDefinitionAttribute.cs" />
+    <Compile Include="Gameplay\Entities\Spring.cs" />
+    <Compile Include="Gameplay\Entities\TriggerPathSwitch.cs" />
+    <Compile Include="EntityOptions.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Gameplay\PowerupType.cs" />
+    <Compile Include="GameVariable.cs" />
+    <Compile Include="IGameEngine.cs" />
+    <Compile Include="Input\ControllerState.cs" />
+    <Compile Include="Movement\BasicMoveController.cs" />
+    <Compile Include="Movement\BounceMoveController.cs" />
+    <Compile Include="Movement\FallMoveController.cs" />
+    <Compile Include="Movement\IMoveController.cs" />
+    <Compile Include="Movement\PlayerMoveController.cs" />
+    <Compile Include="Rect.cs" />
+    <Compile Include="Int32Rect.cs" />
+    <Compile Include="RenderPriority.cs" />
+    <Compile Include="Resources\ObjectPool.cs" />
+    <Compile Include="Resources\Sound.cs" />
+    <Compile Include="Services\AudioService.cs" />
+    <Compile Include="Services\CollisionService.cs" />
+    <Compile Include="Services\IAudioService.cs" />
+    <Compile Include="Services\ICollisionService.cs" />
+    <Compile Include="SolidType.cs" />
+    <Compile Include="Tiles\ArtTileLayer.cs" />
+    <Compile Include="Tiles\CollisionTileLayer.cs" />
+    <Compile Include="Tiles\GeometryTile.cs" />
+    <Compile Include="Tiles\GeometryTileLayer.cs" />
+    <Compile Include="Line.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="Render\Color.cs" />
+    <Compile Include="Render\Renderable.cs" />
+    <Compile Include="Render\VisTileHighlight.cs" />
+    <Compile Include="Render\VisLine.cs" />
+    <Compile Include="Resources\GameResource.cs" />
+    <Compile Include="Resources\ResourceLoadEventArgs.cs" />
+    <Compile Include="Resources\Sprite.cs" />
+    <Compile Include="Resources\SpriteAnimation.cs" />
+    <Compile Include="Resources\SpriteAnimationFrame.cs" />
+    <Compile Include="Services\EntityService.cs" />
+    <Compile Include="Services\GameService.cs" />
+    <Compile Include="Services\IEntityService.cs" />
+    <Compile Include="Services\IGameService.cs" />
+    <Compile Include="Services\IInputService.cs" />
+    <Compile Include="Services\IMapService.cs" />
+    <Compile Include="Services\InputService.cs" />
+    <Compile Include="Services\IRenderService.cs" />
+    <Compile Include="Services\IResourceService.cs" />
+    <Compile Include="Services\IVariableService.cs" />
+    <Compile Include="Services\MapService.cs" />
+    <Compile Include="Services\RenderService.cs" />
+    <Compile Include="Services\ResourceService.cs" />
+    <Compile Include="Services\VariableService.cs" />
+    <Compile Include="Tiles\TileSet.cs" />
+    <Compile Include="Tiles\TileDefinition.cs" />
+    <Compile Include="LevelLoadException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Int32Point.cs" />
+    <Compile Include="Tiles\TilesetType.cs" />
+    <Compile Include="TraceLineOptions.cs" />
+    <Compile Include="TraceQuery.cs" />
+    <Compile Include="TraceResult.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

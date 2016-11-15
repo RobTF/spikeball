@@ -1,0 +1,7 @@
+brakesmoke_idle_0 = 16 15 13 14
+brakesmoke_idle_1 = 0 0 21 14
+brakesmoke_idle_2 = 0 15 15 14
+brakesmoke_idle_3 = 36 0 11 12
+brakesmoke_idle_4 = 22 0 13 11
+brakesmoke_idle_5 = 30 13 8 10
+brakesmoke_idle_6 = 48 0 8 9

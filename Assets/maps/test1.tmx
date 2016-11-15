@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="300" height="100" tilewidth="16" tileheight="16" backgroundcolor="#fbe7ff" nextobjectid="16">
+ <tileset firstgid="1" name="art" tilewidth="16" tileheight="16" tilecount="1850" columns="50">
+  <image source="../textures/test1/art.png" width="800" height="600"/>
+ </tileset>
+ <tileset firstgid="1851" name="collision" tilewidth="16" tileheight="16" tilecount="1850" columns="50">
+  <image source="../textures/test1/collision_map.bmp" trans="ffffff" width="800" height="600"/>
+  <tile id="0">
+   <properties>
+    <property name="angle" type="int" value="0"/>
+    <property name="angle_ceiling" type="int" value="180"/>
+    <property name="angle_leftwall" type="int" value="270"/>
+    <property name="angle_rightwall" type="int" value="90"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="angle" type="int" value="180"/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="angle" type="int" value="20"/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="angle" type="int" value="20"/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="angle" type="int" value="340"/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="angle" type="int" value="340"/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="angle" type="int" value="90"/>
+   </properties>
+  </tile>
+  <tile id="51">
+   <properties>
+    <property name="angle" type="int" value="270"/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="angle" type="int" value="0"/>
+    <property name="solid_type" type="int" value="2"/>
+   </properties>
+  </tile>
+  <tile id="150">
+   <properties>
+    <property name="angle" type="int" value="35"/>
+   </properties>
+  </tile>
+  <tile id="151">
+   <properties>
+    <property name="angle" type="int" value="35"/>
+   </properties>
+  </tile>
+  <tile id="154">
+   <properties>
+    <property name="angle" type="int" value="325"/>
+   </properties>
+  </tile>
+  <tile id="155">
+   <properties>
+    <property name="angle" type="int" value="325"/>
+   </properties>
+  </tile>
+  <tile id="203">
+   <properties>
+    <property name="angle" type="int" value="84"/>
+   </properties>
+  </tile>
+  <tile id="204">
+   <properties>
+    <property name="angle" type="int" value="174"/>
+   </properties>
+  </tile>
+  <tile id="205">
+   <properties>
+    <property name="angle" type="int" value="157"/>
+   </properties>
+  </tile>
+  <tile id="206">
+   <properties>
+    <property name="angle" type="int" value="140"/>
+   </properties>
+  </tile>
+  <tile id="209">
+   <properties>
+    <property name="angle" type="int" value="210"/>
+   </properties>
+  </tile>
+  <tile id="210">
+   <properties>
+    <property name="angle" type="int" value="202"/>
+   </properties>
+  </tile>
+  <tile id="211">
+   <properties>
+    <property name="angle" type="int" value="185"/>
+   </properties>
+  </tile>
+  <tile id="212">
+   <properties>
+    <property name="angle" type="int" value="275"/>
+   </properties>
+  </tile>
+  <tile id="253">
+   <properties>
+    <property name="angle" type="int" value="67"/>
+   </properties>
+  </tile>
+  <tile id="256">
+   <properties>
+    <property name="angle" type="int" value="135"/>
+   </properties>
+  </tile>
+  <tile id="257">
+   <properties>
+    <property name="angle" type="int" value="120"/>
+   </properties>
+  </tile>
+  <tile id="258">
+   <properties>
+    <property name="angle" type="int" value="230"/>
+   </properties>
+  </tile>
+  <tile id="259">
+   <properties>
+    <property name="angle" type="int" value="225"/>
+   </properties>
+  </tile>
+  <tile id="262">
+   <properties>
+    <property name="angle" type="int" value="292"/>
+   </properties>
+  </tile>
+  <tile id="302">
+   <properties>
+    <property name="angle" type="int" value="45"/>
+   </properties>
+  </tile>
+  <tile id="303">
+   <properties>
+    <property name="angle" type="int" value="50"/>
+   </properties>
+  </tile>
+  <tile id="307">
+   <properties>
+    <property name="angle" type="int" value="112"/>
+   </properties>
+  </tile>
+  <tile id="308">
+   <properties>
+    <property name="angle" type="int" value="247"/>
+   </properties>
+  </tile>
+  <tile id="312">
+   <properties>
+    <property name="angle" type="int" value="300"/>
+   </properties>
+  </tile>
+  <tile id="313">
+   <properties>
+    <property name="angle" type="int" value="315"/>
+   </properties>
+  </tile>
+  <tile id="350">
+   <properties>
+    <property name="angle" type="int" value="5"/>
+   </properties>
+  </tile>
+  <tile id="351">
+   <properties>
+    <property name="angle" type="int" value="22"/>
+   </properties>
+  </tile>
+  <tile id="352">
+   <properties>
+    <property name="angle" type="int" value="30"/>
+   </properties>
+  </tile>
+  <tile id="357">
+   <properties>
+    <property name="angle" type="int" value="95"/>
+   </properties>
+  </tile>
+  <tile id="358">
+   <properties>
+    <property name="angle" type="int" value="264"/>
+   </properties>
+  </tile>
+  <tile id="363">
+   <properties>
+    <property name="angle" type="int" value="320"/>
+   </properties>
+  </tile>
+  <tile id="364">
+   <properties>
+    <property name="angle" type="int" value="337"/>
+   </properties>
+  </tile>
+  <tile id="365">
+   <properties>
+    <property name="angle" type="int" value="355"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="3701" name="objects" tilewidth="16" tileheight="16" tilecount="1850" columns="50">
+  <image source="../textures/entities.png" trans="ffffff" width="800" height="600"/>
+ </tileset>
+ <layer name="art" width="300" height="100">
+  <properties>
+   <property name="vis_layer" type="int" value="0"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt3e9KVEEcx+E5FXQ5CtWLuhn1hZpa3U5JoV2QFfTndqSB3VPLrm5n7MzZ3xyeB76IiI4cmM8LWdyUuMvxckAs7uYmzwRicjc3eSYQk7u5yTOBmKLdzZPldinaMwEWot3Nvle7/L2iPRNgIdrdnLJXp3mvVz6e5Z1PdDZQLtrdnKJX7/M+rJy1vmjPBFiIdjdrNuNfndIriC3a3azRjKGdivC3fuB+c+5Vaaf0CmKbolcXyw0xRq8e2im9gtjm1Kv/7ZReQWy1e3WT6vdqrE7pFcRWu1e36WG9GmLsTukVxDakV6uvp1x/beU2e11K+93fXg3p1pBm1OqUXkFsfa9O02aL+i5cbtnHvE8r3/cs7yA36jDvKO86bfbqrrPOl5/3zVj/+lmq3ym9gtj6Xo1119fbdN+2NfByxN9Hr2A+xu7VHAYAAAAAAAAAAAAwJ0Nfj15zAEPsulV6BQy12o3veT/yflY660ve17xveZ+TXgFl+mY87lJ60k1zZpfPedTpFVCmb8aLiVrVe65XQKE//5Nq4l6d6BVQaJfN0CughF4BrdAroBV6BbSidjO2vfeOXgEl9ApohV4BrajRjOMtq302MF/+3g60Qq+AVugV0Aq9AlqhV0Ar9ApohV4BrdAroBV6BbRCr4BW6BXQCr0CWqFXQCv0CmhF34xfE597k/QKKNM34+nE7z94m/QKKNM342Xu1auJmrWXz9n3fqlAob4ZV3lvckPe5r2r1K2D/HMP847yrpNeAWUuAgxgiF23Sq8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4vgNV20/rw==
+  </data>
+ </layer>
+ <layer name="art2" width="300" height="100">
+  <properties>
+   <property name="vis_layer" type="int" value="1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzsENACAIADG2Fd1/ANgCNW1y/4sAAACAO6wupycAAAAAAOBxuzvTEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwoQIkTAGj
+  </data>
+ </layer>
+ <layer name="collision" width="300" height="100" opacity="0.35">
+  <data encoding="base64" compression="zlib">
+   eJzt3Vtu00AYhmFf1UZQTqup1HJmM61ECwW6l7Y3nGE7IMF6+KUoAhoIycRjz8TPI32XtS1L815EUdM0/M1+OxtQFmdzkXcCZXI2F3knUCZnc5F3AmUq7WyetLONqbR3AsyUejbHfK5S3wlMXalnU6+Aq0o9mzmf62tc91v76x7/GlCWUs9mjuead2qMewObK+1szj9v7/O5Vu0UULbSejXXx3PpFGyXIXqVco9NnkunYDttU690CrZb7l7tdPl7pVMwDbl7tZfYq1XoFExLzl4dRquOfutVX/fSKZimZQ1Z5XuV32M/rvz9eTTqInbZ/XmPTXulUzBt//uOd2kDpmvs/ugVAAAAAAAAAAAAAADLHLT9D6AP17umuRHbjd3s8tyjjet2sWuZrg9Mw71oyP3Yg9jDzD3Zj+sfaBaQ6CT68Tz2InY6QEuO9QpI9Db68S72PvZhgJa80SsgwfFIn4U/8xk8sCa9AmqhV0At9AqoRc5eLfsfxnoFrEuvgFroFVCLvnu16u/b6BWwLp+3A7XQK6AWegXUQq+AWugVUAu9AmqhV0At9AqohV4BtdAroBZ6BdRCr4Ba6BVQC70CanKra5rbsTuxuwP81taO3/MCEj2KfjyOPYk9HaAle3oFJHoZ/XgVex07y9ySw7j+kV4BiT5GPz7FPse+ZGrJeVz3InapVUCPlv1P49QBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAffgIymnuV
+  </data>
+ </layer>
+ <objectgroup name="objects">
+  <object id="14" type="player_spawn" gid="3701" x="432.5" y="624" width="16" height="16"/>
+ </objectgroup>
+</map>

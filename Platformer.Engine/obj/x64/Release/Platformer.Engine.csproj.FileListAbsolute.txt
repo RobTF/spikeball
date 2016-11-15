@@ -1,0 +1,12 @@
+D:\CodemliaTFS\Play\platformer\Platformer.Engine\bin\x64\Release\Platformer.Engine.dll
+D:\CodemliaTFS\Play\platformer\Platformer.Engine\bin\x64\Release\Platformer.Engine.pdb
+D:\CodemliaTFS\Play\platformer\Platformer.Engine\bin\x64\Release\Microsoft.Practices.ServiceLocation.pdb
+D:\CodemliaTFS\Play\platformer\Platformer.Engine\bin\x64\Release\Microsoft.Practices.ServiceLocation.xml
+D:\CodemliaTFS\Play\platformer\Platformer.Engine\bin\x64\Release\Microsoft.Practices.Unity.xml
+D:\CodemliaTFS\Play\platformer\Platformer.Engine\bin\x64\Release\Microsoft.Practices.Unity.Configuration.xml
+D:\CodemliaTFS\Play\platformer\Platformer.Engine\bin\x64\Release\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\CodemliaTFS\Play\platformer\Platformer.Engine\obj\x64\Release\Platformer.Engine.Resources.Strings.resources
+D:\CodemliaTFS\Play\platformer\Platformer.Engine\obj\x64\Release\Platformer.Engine.csproj.GenerateResource.Cache
+D:\CodemliaTFS\Play\platformer\Platformer.Engine\obj\x64\Release\Platformer.Engine.dll
+D:\CodemliaTFS\Play\platformer\Platformer.Engine\obj\x64\Release\Platformer.Engine.pdb
+D:\CodemliaTFS\Play\platformer\Platformer.Engine\obj\x64\Release\Platformer.Engine.csprojResolveAssemblyReference.cache

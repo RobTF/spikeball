@@ -1,0 +1,52 @@
+﻿/*
+ *  Copyright (c) 2016 Rob Harwood <rob@codemlia.com>
+ *  
+ *  Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *  and associated documentation files (the "Software"), to deal in the Software without
+ *  restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *  distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
+ *  Software is furnished to do so, subject to the following conditions:
+ *
+ *  The above copyright notice and this permission notice shall be included in all copies or
+ *  substantial portions of the Software.
+ *
+ *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *  BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ *  DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+namespace Platformer.Engine
+{
+    using Entities;
+    using Tiles;
+
+    /// <summary>
+    /// Data structure that encapsulates the results of a trace.
+    /// </summary>
+    public struct TraceResult
+    {
+        /// <summary>
+        /// Gets or sets a value indicating whether the traceline hit a game object.
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if hit; otherwise, <c>false</c>.
+        /// </value>
+        public bool Hit { get; set; }
+
+        /// <summary>
+        /// Gets or sets the world coordinates of the contact point, will equal the end of the traceline if nothing was hit.
+        /// </summary>
+        public Point ContactPoint { get; set; }
+
+        /// <summary>
+        /// Gets or sets the tile that was hit.
+        /// </summary>
+        public GeometryTile Tile { get; set; }
+
+        /// <summary>
+        /// Gets or sets the entity that was hit.
+        /// </summary>
+        public GameEntity Entity { get; set; }
+    }
+}

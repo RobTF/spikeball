@@ -1,0 +1,2 @@
+D:\CodemliaTFS\Play\platformer\Platformer.Engine\obj\x86\Release\Platformer.Engine.Resources.Strings.resources
+D:\CodemliaTFS\Play\platformer\Platformer.Engine\obj\x86\Release\Platformer.Engine.csproj.GenerateResource.Cache

@@ -1,0 +1,2 @@
+ring = 0
+sonic = 0

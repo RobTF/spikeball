@@ -47,3 +47,10 @@ If you are inspired to build a full game with this engine as a base then PLEASE 
 an idea let me know and I will lively endeavour to support you. There are no royalties required and everytihng falls under
 the MIT licence. Libraries I have referenced (such as BASS) which are licenced by other means are easily replaced.
 </p>
+
+<h2>Images</h2>
+<img src="doc/img2.png" />
+<p>In game</p>
+
+<img src="doc/img2.png" />
+<p>Map editing</p>

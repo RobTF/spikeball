@@ -1,0 +1,4 @@
+monitor_broken_0 = 0 0 30 30
+monitor_idle_0 = 31 0 30 30
+monitor_idle_1 = 0 31 30 30
+monitor_idle_2 = 31 31 30 30

@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platformer.Engine", "Platformer.Engine\Platformer.Engine.csproj", "{51A730E7-AA78-4A76-81F5-896B10734968}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{67DB740C-9FBC-449E-B696-10EA6AB9DAA7}"
+	ProjectSection(SolutionItems) = preProject
+		Notes.txt = Notes.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{E320A646-A348-43B9-AFFE-95808FA2E960}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpriteSheetPacker", "SpriteSheetPacker", "{F6943F05-53E2-4639-B996-A46FA12CF163}"
+	ProjectSection(SolutionItems) = preProject
+		Utils\SpriteSheetPacker\Licence.txt = Utils\SpriteSheetPacker\Licence.txt
+		Utils\SpriteSheetPacker\Sprite Sheet Packer.exe = Utils\SpriteSheetPacker\Sprite Sheet Packer.exe
+		Utils\SpriteSheetPacker\SpriteSheetPacker.XnaExporters.dll = Utils\SpriteSheetPacker\SpriteSheetPacker.XnaExporters.dll
+		Utils\SpriteSheetPacker\sspack.exe = Utils\SpriteSheetPacker\sspack.exe
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platformer.DirectX", "Platformer.DirectX\Platformer.DirectX.csproj", "{32E2A401-86DD-4968-8E9B-B8AACD988B8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51A730E7-AA78-4A76-81F5-896B10734968}.Debug|x64.ActiveCfg = Debug|x64
+		{51A730E7-AA78-4A76-81F5-896B10734968}.Debug|x64.Build.0 = Debug|x64
+		{51A730E7-AA78-4A76-81F5-896B10734968}.Debug|x86.ActiveCfg = Debug|x86
+		{51A730E7-AA78-4A76-81F5-896B10734968}.Debug|x86.Build.0 = Debug|x86
+		{51A730E7-AA78-4A76-81F5-896B10734968}.Release|x64.ActiveCfg = Release|x64
+		{51A730E7-AA78-4A76-81F5-896B10734968}.Release|x64.Build.0 = Release|x64
+		{51A730E7-AA78-4A76-81F5-896B10734968}.Release|x86.ActiveCfg = Release|x86
+		{51A730E7-AA78-4A76-81F5-896B10734968}.Release|x86.Build.0 = Release|x86
+		{32E2A401-86DD-4968-8E9B-B8AACD988B8E}.Debug|x64.ActiveCfg = Debug|x64
+		{32E2A401-86DD-4968-8E9B-B8AACD988B8E}.Debug|x64.Build.0 = Debug|x64
+		{32E2A401-86DD-4968-8E9B-B8AACD988B8E}.Debug|x86.ActiveCfg = Debug|x86
+		{32E2A401-86DD-4968-8E9B-B8AACD988B8E}.Debug|x86.Build.0 = Debug|x86
+		{32E2A401-86DD-4968-8E9B-B8AACD988B8E}.Release|x64.ActiveCfg = Release|x64
+		{32E2A401-86DD-4968-8E9B-B8AACD988B8E}.Release|x64.Build.0 = Release|x64
+		{32E2A401-86DD-4968-8E9B-B8AACD988B8E}.Release|x86.ActiveCfg = Release|x86
+		{32E2A401-86DD-4968-8E9B-B8AACD988B8E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F6943F05-53E2-4639-B996-A46FA12CF163} = {E320A646-A348-43B9-AFFE-95808FA2E960}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codemlia.com/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Platformer.Engine\\Platformer.Engine.csproj
+		SccProjectName1 = Platformer.Engine
+		SccLocalPath1 = Platformer.Engine
+		SccProjectUniqueName2 = Platformer.DirectX\\Platformer.DirectX.csproj
+		SccProjectName2 = Platformer.DirectX
+		SccLocalPath2 = Platformer.DirectX
+	EndGlobalSection
+EndGlobal

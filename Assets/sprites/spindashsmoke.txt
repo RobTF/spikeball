@@ -1,0 +1,6 @@
+spindashsmoke_idle_0 = 0 0 32 22
+spindashsmoke_idle_1 = 0 23 32 22
+spindashsmoke_idle_2 = 33 0 32 22
+spindashsmoke_idle_3 = 33 23 32 22
+spindashsmoke_idle_4 = 66 0 32 22
+spindashsmoke_idle_5 = 66 23 32 22

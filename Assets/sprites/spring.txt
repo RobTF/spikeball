@@ -1,0 +1,4 @@
+spring_redidle_0 = 0 0 32 30
+spring_redopen_0 = 0 31 32 30
+spring_yellowidle_0 = 33 0 32 30
+spring_yellowopen_0 = 33 31 32 30

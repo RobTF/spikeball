@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objecttypes>
+ <objecttype name="player_spawn" color="#a0a0a4"/>
+ <objecttype name="camera" color="#a0a0a4"/>
+ <objecttype name="brake_smoke" color="#a0a0a4"/>
+ <objecttype name="spindash_smoke" color="#a0a0a4"/>
+ <objecttype name="trigger_pathswitch" color="#a0a0a4">
+  <property name="collision_path1" type="int" default="0"/>
+  <property name="collision_path2" type="int" default="0"/>
+  <property name="ground_only" type="bool" default="false"/>
+  <property name="vis_layer1" type="int" default="0"/>
+  <property name="vis_layer2" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="item_monitor" color="#a0a0a4">
+  <property name="powerup_type" type="string" default=""/>
+ </objecttype>
+ <objecttype name="sonic_camera" color="#a0a0a4"/>
+ <objecttype name="spring" color="#a0a0a4">
+  <property name="direction" type="string"/>
+  <property name="spring_type" type="string"/>
+ </objecttype>
+ <objecttype name="bridge" color="#a0a0a4">
+  <property name="length" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="ring" color="#a0a0a4"/>
+ <objecttype name="spikes" color="#a0a0a4">
+  <property name="direction" type="string"/>
+ </objecttype>
+</objecttypes>

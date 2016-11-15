@@ -1,0 +1,4 @@
+redidle = 0
+redopen = 0
+yellowidle = 0
+yellowopen = 0

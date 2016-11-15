@@ -1,0 +1,14 @@
+idle = 0
+walk = 0,1,2,3,4,5,6,7
+run = 0,1,2,3
+roll = 0,4,1,4,2,4,3,4
+brake = 0,1,2,3,3,3
+push = 0,1,2,3
+balance1 = 0,1,2,1
+balance2 = 0,1
+balance3 = 0,1,2,3
+crouch = 0,1
+lookup = 0,1
+spindash = 0,1,2,3,4,5
+spring = 0,1,2,3,4
+fall = 0,1

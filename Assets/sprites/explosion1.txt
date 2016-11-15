@@ -1,0 +1,5 @@
+explosion1_idle_0 = 65 0 16 16
+explosion1_idle_1 = 33 0 31 31
+explosion1_idle_2 = 0 0 32 32
+explosion1_idle_3 = 0 33 30 30
+explosion1_idle_4 = 31 33 28 28

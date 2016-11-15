@@ -1,0 +1,2 @@
+mpowerup_ring_0 = 0 0 16 14
+mpowerup_sonic_0 = 0 15 16 14
