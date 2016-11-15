@@ -52,5 +52,5 @@ the MIT licence. Libraries I have referenced (such as BASS) which are licenced b
 <img src="doc/img2.png" />
 <p>In game</p>
 
-<img src="doc/img2.png" />
+<img src="doc/img3.png" />
 <p>Map editing</p>
