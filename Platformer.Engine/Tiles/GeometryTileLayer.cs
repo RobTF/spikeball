@@ -19,6 +19,7 @@
 namespace Platformer.Engine.Tiles
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
 
     /// <summary>
@@ -28,7 +29,8 @@ namespace Platformer.Engine.Tiles
     {
         private Map _map;
         private TilesetType _type;
-        private GeometryTile[,] _tiles;
+        private bool[] _tileBits;
+        private Dictionary<ulong, GeometryTile> _tileDict;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GeometryTileLayer" /> class.
@@ -43,7 +45,8 @@ namespace Platformer.Engine.Tiles
 
             _type = type;
             _map = map;
-            _tiles = new GeometryTile[map.Width, map.Height];
+            _tileDict = new Dictionary<ulong, GeometryTile>();
+            _tileBits = new bool[map.Width * map.Height];
 
             HorizontalScrollMultipler = VerticalScrollMultipler = 1.0f;
             HorizontalOffset = VerticalOffset = 0.0f;
@@ -61,11 +64,6 @@ namespace Platformer.Engine.Tiles
         /// Gets the type of the layer.
         /// </summary>
         public TilesetType Type => _type;
-
-        /// <summary>
-        /// Gets the tiles that make up the layer.
-        /// </summary>
-        public GeometryTile[,] Tiles => _tiles;
 
         /// <summary>
         /// Gets or sets the greatest height of any tile in this layer.
@@ -118,7 +116,12 @@ namespace Platformer.Engine.Tiles
 
             foreach(var tile in tiles)
             {
-                _tiles[tile.GridPosition.X, tile.GridPosition.Y] = tile;
+                var key = (ulong)tile.GridPosition.X;
+                key <<= 32;
+                key += (ulong)tile.GridPosition.Y;
+
+                _tileBits[(_map.Width * tile.GridPosition.X) + tile.GridPosition.Y] = true;
+                _tileDict.Add(key, tile);
 
                 height = Math.Max(tile.Definition.Rect.Size.Y, height);
                 width = Math.Max(tile.Definition.Rect.Size.X, width);
@@ -126,6 +129,26 @@ namespace Platformer.Engine.Tiles
 
             MaxTileWidth = width;
             MaxTileHeight = height;
+        }
+
+        /// <summary>
+        /// Gets the tile at the specified position.
+        /// </summary>
+        /// <param name="x">The x position.</param>
+        /// <param name="y">The y position.</param>
+        /// <returns>A tile, or null if no tile was found.</returns>
+        public GeometryTile GetTile(int x, int y)
+        {
+            var bit = _tileBits[(_map.Width * x) + y];
+            if (bit)
+            {
+                var key = (ulong)x;
+                key <<= 32;
+                key += (ulong)y;
+                return _tileDict[key];
+            }
+
+            return null;
         }
 
         /// <summary>

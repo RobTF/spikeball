@@ -379,21 +379,13 @@ namespace Platformer.DirectX.Rendering
 
                 if (layer.Visible)
                 {
+                    //var xlen = layer.Tiles.GetLength(0);
+                    //var ylen = layer.Tiles.GetLength(1);
                     for (var y = _rc.FirstTileRow; y <= _rc.FirstTileRow + _rc.TilesHigh; y++)
                     {
-                        if ((y < 0) || (y >= layer.Tiles.GetLength(1)))
-                        {
-                            continue;
-                        }
-
                         for (var x = _rc.FirstTileCol; x <= _rc.FirstTileCol + _rc.TilesWide; x++)
                         {
-                            if ((x < 0) || (x >= layer.Tiles.GetLength(0)))
-                            {
-                                continue;
-                            }
-
-                            var tile = layer.Tiles[x, y];
+                            var tile = layer.GetTile(x, y);
                             if (tile == null)
                             {
                                 // empty tile
@@ -576,19 +568,9 @@ namespace Platformer.DirectX.Rendering
                     var layer = map.GeometryLayers[i];
                     for (var y = _rc.FirstTileRow; y <= _rc.FirstTileRow + _rc.TilesHigh; y++)
                     {
-                        if ((y < 0) || (y >= layer.Tiles.GetLength(1)))
-                        {
-                            continue;
-                        }
-
                         for (var x = _rc.FirstTileCol; x <= _rc.FirstTileCol + _rc.TilesWide; x++)
                         {
-                            if ((x < 0) || (x >= layer.Tiles.GetLength(0)))
-                            {
-                                continue;
-                            }
-
-                            var tile = layer.Tiles[x, y];
+                            var tile = layer.GetTile(x, y);
                             if (tile == null)
                             {
                                 // empty tile

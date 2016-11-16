@@ -398,18 +398,7 @@ namespace Platformer.Engine.Services
                     }
                 }
 
-                // bounds check
-                if ((tileCol >= layer.Tiles.GetLength(0)))
-                {
-                    return hit;
-                }
-
-                if ((tileRow >= layer.Tiles.GetLength(1)))
-                {
-                    return hit;
-                }
-
-                var tile = layer.Tiles[tileCol, tileRow];
+                var tile = layer.GetTile(tileCol, tileRow);
 
                 if (tile != null)
                 {
