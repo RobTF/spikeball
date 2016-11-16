@@ -1,4 +1,0 @@
-D:\CodemliaTFS\Play\platformer\Platformer.DirectX\bin\x86\Release\Platformer.DirectX.exe.config
-D:\CodemliaTFS\Play\platformer\Platformer.DirectX\obj\x86\Release\Platformer.DirectX.GameForm.resources
-D:\CodemliaTFS\Play\platformer\Platformer.DirectX\obj\x86\Release\Platformer.DirectX.Properties.Resources.resources
-D:\CodemliaTFS\Play\platformer\Platformer.DirectX\obj\x86\Release\Platformer.DirectX.csproj.GenerateResource.Cache
