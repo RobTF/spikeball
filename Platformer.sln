@@ -53,16 +53,4 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F6943F05-53E2-4639-B996-A46FA12CF163} = {E320A646-A348-43B9-AFFE-95808FA2E960}
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codemlia.com/tfs/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Platformer.Engine\\Platformer.Engine.csproj
-		SccProjectName1 = Platformer.Engine
-		SccLocalPath1 = Platformer.Engine
-		SccProjectUniqueName2 = Platformer.DirectX\\Platformer.DirectX.csproj
-		SccProjectName2 = Platformer.DirectX
-		SccLocalPath2 = Platformer.DirectX
-	EndGlobalSection
 EndGlobal

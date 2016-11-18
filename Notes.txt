@@ -1,2 +1,10 @@
 Finish demo map
 RELEASE
+
+
+Game => GameRules
+GameRules
+---------
+State { Intro, Playing, Complete }
+Character { Sonic, Tails, Knuckles }
+CreatePlayer() -> Create player

@@ -57,7 +57,6 @@ namespace Platformer.DirectX.Rendering
         private SolidColorBrush _hudYellow;
         private SolidColorBrush _hudWhite;
         private TextFormat _hudTextFormat;
-        private double _nextHudFlashTime;
 
         private GameVariable<bool> _varShowTileFrames;
         private GameVariable<bool> _varShowCollisionMaps;
@@ -104,7 +103,7 @@ namespace Platformer.DirectX.Rendering
             InitFonts();
 
             // DeviceCreationFlags.BgraSupport must be enabled to allow Direct2D interop.
-            SharpDX.Direct3D11.Device defaultDevice = new SharpDX.Direct3D11.Device(DriverType.Hardware, /*DeviceCreationFlags.Debug | */DeviceCreationFlags.BgraSupport);
+            SharpDX.Direct3D11.Device defaultDevice = new SharpDX.Direct3D11.Device(DriverType.Hardware, DeviceCreationFlags.Debug | DeviceCreationFlags.BgraSupport);
 
             // Query the default device for the supported device and context interfaces.
             _device = defaultDevice.QueryInterface<SharpDX.Direct3D11.Device1>();
@@ -126,7 +125,8 @@ namespace Platformer.DirectX.Rendering
                 Usage = Usage.RenderTargetOutput,
                 BufferCount = 2,
                 Scaling = Scaling.Stretch,
-                SwapEffect = SwapEffect.FlipSequential
+                SwapEffect = SwapEffect.FlipSequential,
+                Flags = SwapChainFlags.AllowModeSwitch
             };
 
             // Generate a swap chain for our window based on the specified description.
@@ -152,11 +152,12 @@ namespace Platformer.DirectX.Rendering
             _d2dTarget = new Bitmap1(_d2dContext, backBuffer, properties);
 
             _d2dContext.Target = _d2dTarget;
+            _d2dContext.TextAntialiasMode = SharpDX.Direct2D1.TextAntialiasMode.Aliased;
+            _d2dContext.AntialiasMode = AntialiasMode.Aliased;
 
             _hudYellow = new SolidColorBrush(_d2dContext, new Color4(1.0f, 1.0f, 0.0f, 1.0f));
             _hudWhite = new SolidColorBrush(_d2dContext, new Color4(1.0f, 1.0f, 1.0f, 1.0f));
             _hudTextFormat = new TextFormat(_dwFactory, "Sonic Genesis/Mega Drive Font", _fontCollection, FontWeight.Normal, FontStyle.Normal, FontStretch.Normal, 14);
-            _nextHudFlashTime = 0.0;
 
 
             // init game stuff
@@ -379,8 +380,6 @@ namespace Platformer.DirectX.Rendering
 
                 if (layer.Visible)
                 {
-                    //var xlen = layer.Tiles.GetLength(0);
-                    //var ylen = layer.Tiles.GetLength(1);
                     for (var y = _rc.FirstTileRow; y <= _rc.FirstTileRow + _rc.TilesHigh; y++)
                     {
                         for (var x = _rc.FirstTileCol; x <= _rc.FirstTileCol + _rc.TilesWide; x++)
@@ -501,7 +500,7 @@ namespace Platformer.DirectX.Rendering
                     bitmap,
                     new RawRectangleF(renderX, renderY, renderX + bitmapWidth, renderY + bitmapHeight),
                     1.0f,
-                    BitmapInterpolationMode.Linear,
+                    BitmapInterpolationMode.NearestNeighbor,
                     frameRect);
 
                 _d2dContext.Transform = oldTransform;
