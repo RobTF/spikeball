@@ -50,6 +50,7 @@ namespace Platformer.DirectX.Rendering
         private SwapChain1 _swapChain;
         private SharpDX.Direct2D1.Bitmap1 _d2dTarget;
         private SharpDX.Direct2D1.Factory2 _d2dFactory;
+        private Surface _backBuffer;
 
         // hud
         private SharpDX.DirectWrite.Factory _dwFactory;
@@ -75,7 +76,7 @@ namespace Platformer.DirectX.Rendering
 
         private GameForm _form;
 
-        private bool _canRender;
+        private bool _resize;
         private RenderContext _rc;
         private IGameEngine _game;
         private int _height;
@@ -102,7 +103,7 @@ namespace Platformer.DirectX.Rendering
             }
 
             _form = form;
-            _canRender = true;
+            _resize = false;
             _scale = 1.0f;
             _width = width;
             _height = height;
@@ -118,45 +119,19 @@ namespace Platformer.DirectX.Rendering
             _d3dContext = _device.ImmediateContext.QueryInterface<SharpDX.Direct3D11.DeviceContext1>();
 
             // Query for the adapter and more advanced DXGI objects.
-            SharpDX.DXGI.Device2 dxgiDevice2 = _device.QueryInterface<SharpDX.DXGI.Device2>();
-            SharpDX.DXGI.Adapter dxgiAdapter = dxgiDevice2.Adapter;
-            SharpDX.DXGI.Factory2 dxgiFactory2 = dxgiAdapter.GetParent<SharpDX.DXGI.Factory2>();
-
-            // Description for our swap chain settings.
-            SwapChainDescription1 description = new SwapChainDescription1()
+            using (var dxgiDevice2 = _device.QueryInterface<SharpDX.DXGI.Device2>())
             {
-                Width = 0,
-                Height = 0,
-                Format = Format.B8G8R8A8_UNorm,
-                Stereo = false,
-                SampleDescription = new SampleDescription(1, 0),
-                Usage = Usage.RenderTargetOutput,
-                BufferCount = 2,
-                Scaling = Scaling.Stretch,
-                SwapEffect = SwapEffect.FlipSequential,
-                Flags = SwapChainFlags.AllowModeSwitch
-            };
+                _d2dFactory = new SharpDX.Direct2D1.Factory2(SharpDX.Direct2D1.FactoryType.SingleThreaded);
 
-            // Generate a swap chain for our window based on the specified description.
-            _swapChain = new SwapChain1(dxgiFactory2, _device, form.Handle, ref description);
+                // Get the default Direct2D device and create a context.
+                using (var d2dDevice = new SharpDX.Direct2D1.Device1(_d2dFactory, dxgiDevice2))
+                {
+                    _d2dContext = new SharpDX.Direct2D1.DeviceContext1(d2dDevice, SharpDX.Direct2D1.DeviceContextOptions.None);
+                }
+            }
 
-            _d2dFactory = new SharpDX.Direct2D1.Factory2(SharpDX.Direct2D1.FactoryType.SingleThreaded);
+            CreateSizeDependentResources();
 
-            // Get the default Direct2D device and create a context.
-            SharpDX.Direct2D1.Device1 d2dDevice = new SharpDX.Direct2D1.Device1(_d2dFactory, dxgiDevice2);
-            _d2dContext = new SharpDX.Direct2D1.DeviceContext1(d2dDevice, SharpDX.Direct2D1.DeviceContextOptions.None);
-            Size2F dpi = _d2dFactory.DesktopDpi;
-
-            // Specify the properties for the bitmap that we will use as the target of our Direct2D operations.
-            // We want a 32-bit BGRA surface with premultiplied alpha.
-            BitmapProperties1 properties = new BitmapProperties1(new SharpDX.Direct2D1.PixelFormat(SharpDX.DXGI.Format.B8G8R8A8_UNorm, SharpDX.Direct2D1.AlphaMode.Premultiplied),
-                dpi.Height, dpi.Width, BitmapOptions.Target | BitmapOptions.CannotDraw);
-
-            // Get the default surface as a backbuffer and create the Bitmap1 that will hold the Direct2D drawing target.
-            Surface backBuffer = _swapChain.GetBackBuffer<Surface>(0);
-            _d2dTarget = new Bitmap1(_d2dContext, backBuffer, properties);
-
-            _d2dContext.Target = _d2dTarget;
             _d2dContext.TextAntialiasMode = SharpDX.Direct2D1.TextAntialiasMode.Aliased;
             _d2dContext.AntialiasMode = AntialiasMode.Aliased;
             _d2dContext.UnitMode = UnitMode.Pixels;
@@ -164,7 +139,6 @@ namespace Platformer.DirectX.Rendering
             _hudYellow = new SolidColorBrush(_d2dContext, new Color4(1.0f, 1.0f, 0.0f, 1.0f));
             _hudWhite = new SolidColorBrush(_d2dContext, new Color4(1.0f, 1.0f, 1.0f, 1.0f));
             _hudTextFormat = new TextFormat(_dwFactory, "Sonic Genesis/Mega Drive Font", _fontCollection, FontWeight.Normal, FontStyle.Normal, FontStretch.Normal, 14);
-
 
             // init game stuff
             _game = gameEngine;
@@ -213,6 +187,7 @@ namespace Platformer.DirectX.Rendering
                 if (_scale != value)
                 {
                     _scale = value;
+                    _resize = true;
                 }
             }
         }
@@ -236,9 +211,10 @@ namespace Platformer.DirectX.Rendering
         /// </summary>
         public void Render()
         {
-            if(!_canRender)
+            if(_resize)
             {
-                return;
+                CreateSizeDependentResources();
+                _resize = false;
             }
 
             BeginDraw();
@@ -712,54 +688,74 @@ namespace Platformer.DirectX.Rendering
             _fontCollection = new FontCollection(_dwFactory, _fontLoader, _fontLoader.Key);
         }
 
+        /// <summary>
+        /// Creates the size dependent drawing resources.
+        /// </summary>
         private void CreateSizeDependentResources()
         {
-            var oldTarget = _d2dContext.Target;
             _d2dContext.Target = null;
 
-            if(oldTarget != null)
+            if(_d2dTarget != null)
             {
-                oldTarget.Dispose();
+                _d2dTarget.Dispose();
+                _d2dTarget = null;
             }
 
-            if(_swapChain != null)
+            if(_backBuffer != null)
             {
-                _swapChain.Dispose();
+                _backBuffer.Dispose();
+                _backBuffer = null;
             }
-
-            // Description for our swap chain settings.
-            SwapChainDescription1 description = new SwapChainDescription1()
-            {
-                Width = _width * (int)_scale,
-                Height = _height * (int)_scale,
-                Format = Format.B8G8R8A8_UNorm,
-                Stereo = false,
-                SampleDescription = new SampleDescription(1, 0),
-                Usage = Usage.RenderTargetOutput,
-                BufferCount = 2,
-                Scaling = Scaling.Stretch,
-                SwapEffect = SwapEffect.FlipSequential,
-                Flags = SwapChainFlags.AllowModeSwitch
-            };
-
-            // Query for the adapter and more advanced DXGI objects.
-            SharpDX.DXGI.Device2 dxgiDevice2 = _device.QueryInterface<SharpDX.DXGI.Device2>();
-            SharpDX.DXGI.Adapter dxgiAdapter = dxgiDevice2.Adapter;
-            SharpDX.DXGI.Factory2 dxgiFactory2 = dxgiAdapter.GetParent<SharpDX.DXGI.Factory2>();
 
             // Generate a swap chain for our window based on the specified description.
-            _swapChain = new SwapChain1(dxgiFactory2, _device, _form.Handle, ref description);
+            if (_swapChain == null)
+            {
+                // Query for the adapter and more advanced DXGI objects.
+                using (var dxgiDevice2 = _device.QueryInterface<SharpDX.DXGI.Device2>())
+                {
+                    using (var dxgiAdapter = dxgiDevice2.Adapter)
+                    {
+                        using (var dxgiFactory2 = dxgiAdapter.GetParent<SharpDX.DXGI.Factory2>())
+                        {
+
+                            // Description for our swap chain settings.
+                            SwapChainDescription1 description = new SwapChainDescription1()
+                            {
+                                Width = _width * (int)_scale,
+                                Height = _height * (int)_scale,
+                                Format = Format.B8G8R8A8_UNorm,
+                                Stereo = false,
+                                SampleDescription = new SampleDescription(1, 0),
+                                Usage = Usage.RenderTargetOutput,
+                                BufferCount = 2,
+                                Scaling = Scaling.Stretch,
+                                SwapEffect = SwapEffect.FlipSequential,
+                                Flags = SwapChainFlags.AllowModeSwitch
+                            };
+
+                            _swapChain = new SwapChain1(dxgiFactory2, _device, _form.Handle, ref description);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                _swapChain.ResizeBuffers(0, _width * (int)_scale, _height * (int)_scale, Format.B8G8R8A8_UNorm, SwapChainFlags.AllowModeSwitch);
+            }
 
             Size2F dpi = _d2dFactory.DesktopDpi;
 
             // Specify the properties for the bitmap that we will use as the target of our Direct2D operations.
             // We want a 32-bit BGRA surface with premultiplied alpha.
-            BitmapProperties1 properties = new BitmapProperties1(new SharpDX.Direct2D1.PixelFormat(SharpDX.DXGI.Format.B8G8R8A8_UNorm, SharpDX.Direct2D1.AlphaMode.Premultiplied),
-                dpi.Height, dpi.Width, BitmapOptions.Target | BitmapOptions.CannotDraw);
+            BitmapProperties1 properties = new BitmapProperties1(
+                new SharpDX.Direct2D1.PixelFormat(SharpDX.DXGI.Format.B8G8R8A8_UNorm, SharpDX.Direct2D1.AlphaMode.Premultiplied),
+                dpi.Height,
+                dpi.Width,
+                BitmapOptions.Target | BitmapOptions.CannotDraw);
 
             // Get the default surface as a backbuffer and create the Bitmap1 that will hold the Direct2D drawing target.
-            Surface backBuffer = _swapChain.GetBackBuffer<Surface>(0);
-            _d2dTarget = new Bitmap1(_d2dContext, backBuffer, properties);
+            _backBuffer = Surface.FromSwapChain(_swapChain, 0);
+            _d2dTarget = new Bitmap1(_d2dContext, _backBuffer, properties);
 
             _d2dContext.Target = _d2dTarget;
         }

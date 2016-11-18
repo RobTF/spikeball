@@ -71,7 +71,7 @@ namespace Platformer.DirectX
             _form = new GameForm(this, _game);
             _renderer = new Renderer(_game, _form, GameAreaWidth, GameAreaHeight);
 
-            //ChangeScale(2.0f);
+            ChangeScale(2.0f);
 
             InitAudio();
         }
