@@ -592,7 +592,25 @@ namespace Platformer.Engine.Movement
         private void CalculateGroundSpeedRolling()
         {
             var rad = _groundAngle * (Math.PI / 180.0);
-            _gsp -= Math.Round((SlopeFactor * _varService.DeltaTime) * Math.Sin(rad), 5);
+
+            var sinVal = Math.Sin(rad);
+            var sinSign = Math.Sign(sinVal);
+            var slope = SlopeFactor;
+
+            if (sinSign != 0)
+            {
+                bool downHill = Math.Sign(sinVal) != Math.Sign(_gsp);
+                if(downHill)
+                {
+                    slope = 0.3125 * 60.0;
+                }
+                else
+                {
+                    slope = 0.078125 * 60.0;
+                }
+            }
+
+            _gsp += Math.Round((slope * _varService.DeltaTime) * -Math.Sin(rad), 5);
 
             var controlsLocked = _controlLockTime > 0.0;
 
@@ -640,7 +658,7 @@ namespace Platformer.Engine.Movement
         private void CalculateGroundSpeedRunning()
         {
             var rad = _groundAngle * (Math.PI / 180.0);
-            _gsp -= Math.Round((SlopeFactor * _varService.DeltaTime) * Math.Sin(rad), 5);
+            _gsp += Math.Round((SlopeFactor * _varService.DeltaTime) * -Math.Sin(rad), 5);
 
             var controlsLocked = _controlLockTime > 0.0;
 
