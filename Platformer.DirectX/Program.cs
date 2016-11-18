@@ -37,6 +37,9 @@ namespace Platformer.DirectX
     {
         private static readonly TraceSource TraceSource = new TraceSource("Platformer");
 
+        private const int GameAreaWidth = 384;
+        private const int GameAreaHeight = 240;
+
         private Game _game;
         private GameForm _form;
         private Renderer _renderer;
@@ -66,9 +69,25 @@ namespace Platformer.DirectX
             InitGame();
 
             _form = new GameForm(this, _game);
-            _renderer = new Renderer(_game, _form, 384, 240);
+            _renderer = new Renderer(_game, _form, GameAreaWidth, GameAreaHeight);
+
+            //ChangeScale(2.0f);
 
             InitAudio();
+        }
+
+        /// <summary>
+        /// Changes the scale of the windowed mode rendering.
+        /// </summary>
+        /// <param name="scale">The new scale.</param>
+        public void ChangeScale(float scale)
+        {
+            var width = GameAreaWidth * (int)scale;
+            var height = GameAreaHeight * (int)scale;
+
+            _form.Width = width;
+            _form.Height = height;
+            _renderer.Scale = scale;
         }
 
         /// <summary>

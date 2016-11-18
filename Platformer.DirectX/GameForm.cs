@@ -192,5 +192,25 @@ namespace Platformer.DirectX
 
             _prg.StartLevel(menuItem.Text);
         }
+
+        /// <summary>
+        /// Called when a scale menu item is clicked.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void OnScaleItemClicked(object sender, EventArgs e)
+        {
+            var newScale = 1.0f;
+            if(sender == scale2xToolStripMenuItem)
+            {
+                newScale = 2.0f;
+            }
+            else if (sender == scale3xToolStripMenuItem)
+            {
+                newScale = 3.0f;
+            }
+
+            _prg.ChangeScale(newScale);
+        }
     }
 }

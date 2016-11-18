@@ -34,6 +34,10 @@
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.displayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scale1xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scale2xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scale3xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showTracesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showAABBsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,10 +51,11 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.displayToolStripMenuItem,
             this.debugToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(368, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -91,6 +96,37 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.OnExitClicked);
+            // 
+            // displayToolStripMenuItem
+            // 
+            this.displayToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.scale1xToolStripMenuItem,
+            this.scale2xToolStripMenuItem,
+            this.scale3xToolStripMenuItem});
+            this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
+            this.displayToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.displayToolStripMenuItem.Text = "Display";
+            // 
+            // scale1xToolStripMenuItem
+            // 
+            this.scale1xToolStripMenuItem.Name = "scale1xToolStripMenuItem";
+            this.scale1xToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.scale1xToolStripMenuItem.Text = "Scale 1x";
+            this.scale1xToolStripMenuItem.Click += new System.EventHandler(this.OnScaleItemClicked);
+            // 
+            // scale2xToolStripMenuItem
+            // 
+            this.scale2xToolStripMenuItem.Name = "scale2xToolStripMenuItem";
+            this.scale2xToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.scale2xToolStripMenuItem.Text = "Scale 2x";
+            this.scale2xToolStripMenuItem.Click += new System.EventHandler(this.OnScaleItemClicked);
+            // 
+            // scale3xToolStripMenuItem
+            // 
+            this.scale3xToolStripMenuItem.Name = "scale3xToolStripMenuItem";
+            this.scale3xToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.scale3xToolStripMenuItem.Text = "Scale 3x";
+            this.scale3xToolStripMenuItem.Click += new System.EventHandler(this.OnScaleItemClicked);
             // 
             // debugToolStripMenuItem
             // 
@@ -153,10 +189,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 761);
+            this.ClientSize = new System.Drawing.Size(368, 201);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GameForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Spikeball Engine";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -179,6 +217,10 @@
         private System.Windows.Forms.ToolStripMenuItem stopGameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem displayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scale1xToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scale2xToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scale3xToolStripMenuItem;
     }
 }
 
