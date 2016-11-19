@@ -560,6 +560,7 @@ namespace Platformer.Engine.Movement
             if(_rolling)
             {
                 _brakeState = BrakeState.None;
+                return;
             }
 
             if (_brakeState == BrakeState.None)
