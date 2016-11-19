@@ -173,7 +173,7 @@ namespace Platformer.Engine.Gameplay.Entities
         /// Called once when this entity collides with another.
         /// </summary>
         /// <param name="other">The other entity.</param>
-        protected override void OnStartColliding(GameEntity other)
+        protected override void OnColliding(GameEntity other)
         {
             var player = other as Player;
 
@@ -211,7 +211,7 @@ namespace Platformer.Engine.Gameplay.Entities
                 }
             }
 
-            base.OnStartColliding(other);
+            base.OnColliding(other);
         }
 
         /// <summary>
@@ -244,7 +244,10 @@ namespace Platformer.Engine.Gameplay.Entities
             SetAnimation(_openAnimId);
             _isOpen = true;
 
-            player.MoveController.Unroll();
+            if ((_direction == Direction.Up) || (_direction == Direction.Down) || !player.MoveController.Falling)
+            {
+                player.MoveController.Unroll();
+            }
 
             if(verticalSpeed != 0.0)
             {

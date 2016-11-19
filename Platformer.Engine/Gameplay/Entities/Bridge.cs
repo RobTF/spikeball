@@ -178,7 +178,7 @@ namespace Platformer.Engine.Gameplay.Entities
             }
 
             // step the depression factor
-            _depressionFactor = Utils.Lerp(_depressionFactor, (idx != -1) ? 1.0 : 0.0, 2.0, _variableService.DeltaTime);
+            _depressionFactor = Utils.Lerp(_depressionFactor, (idx != -1) ? 1.0 : 0.0, 4.0, _variableService.DeltaTime);
 
             var maxDepression = _maxDepressions[_standIndex];
 
