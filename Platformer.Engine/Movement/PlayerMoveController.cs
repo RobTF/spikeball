@@ -298,6 +298,12 @@ namespace Platformer.Engine.Movement
         /// <param name="ySpeed">If specified, sets the vertical speed of the player.</param>
         public void SetSpeed(double? xSpeed, double? ySpeed)
         {
+            /* perform a wall check now in case our speed is about to adjust greatly
+             * without this it's possible to see zip glitches when X speed changes drastically
+             * in a single frame, for example if hitting a sideways set of spikes at high speed
+             */
+            CheckWall();
+
             if (ySpeed != null)
             {
                 _falling = true;
@@ -442,14 +448,6 @@ namespace Platformer.Engine.Movement
             if ((_controlState & ControllerState.Down) > ControllerState.None)
             {
                 Roll();
-
-                if ((_controlState & ControllerState.Jump) > ControllerState.None)
-                {
-                    if ((_prevControlState & ControllerState.Jump) == ControllerState.None)
-                    {
-                        //ChargeSpindash();
-                    }
-                }
             }
 
             // impulse position
@@ -1309,7 +1307,7 @@ namespace Platformer.Engine.Movement
         /// Checks whether the player is touching/pushing a wall to the left.
         /// </summary>
         /// <param name="touching">set to <c>true</c> if the player is contacting the wall.</param>
-        /// <param name="pushing">set to <c>true</c> is the player is actively pushing agsint the wall.</param>
+        /// <param name="pushing">set to <c>true</c> is the player is actively pushing against the wall.</param>
         private void CheckWallLeft(out bool touching, out bool pushing)
         {
             var size = _player.Size;
